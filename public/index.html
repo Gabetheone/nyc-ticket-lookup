@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NYC Ticket Lookup</title>
+
+    <style>
+
+        body{
+            font-family: Arial;
+            margin:40px;
+        }
+
+        input, select{
+            padding:10px;
+            margin:5px;
+        }
+
+        button{
+            padding:10px 20px;
+            cursor:pointer;
+        }
+
+        table{
+            margin-top:20px;
+            border-collapse: collapse;
+            width:100%;
+        }
+
+        td,th{
+            border:1px solid #ccc;
+            padding:10px;
+            text-align:left;
+        }
+
+        .status {
+            padding:3px 8px;
+            border-radius:4px;
+            font-size:12px;
+            font-weight:bold;
+        }
+
+        .status.pending {
+            background:#ffeaa7;
+            color:#b7791f;
+        }
+
+        .status.complete {
+            background:#c6f6d5;
+            color:#276749;
+        }
+
+        .status.judgment {
+            background:#fed7d7;
+            color:#9b2c2c;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<h2>NYC Parking Ticket Lookup</h2>
+
+<input id="plate" placeholder="License Plate">
+
+<select id="state">
+    <option value="NY">NY</option>
+    <option value="NJ">NJ</option>
+    <option value="PA">PA</option>
+</select>
+
+<button onclick="searchTickets()">Search Tickets</button>
+
+<div id="results"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
