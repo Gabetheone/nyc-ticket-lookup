@@ -8,8 +8,9 @@ async function searchTickets(){
         return;
     }
 
-    const response = await fetch(`/tickets?plate=${plate}&state=${state}`);
-
+    const response = await fetch(
+        `https://nyc-ticket-api.onrender.com/tickets?plate=${plate}&state=${state}`
+    );
     let tickets = await response.json();
 
     /* remove very old tickets */

@@ -20,8 +20,8 @@ const datasets = [
 
 app.get("/tickets", async (req,res)=>{
 
-    const plate = req.query.plate.toUpperCase();
-    const state = req.query.state;
+    const plate = (req.query.plate || "").toUpperCase();
+    const state = (req.query.state || "NY").toUpperCase();
 
     try{
 
