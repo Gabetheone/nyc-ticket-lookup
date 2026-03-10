@@ -28,7 +28,7 @@ app.get("/tickets", async (req,res)=>{
         const requests = datasets.map(dataset => {
 
             const url =
-                `https://data.cityofnewyork.us/resource/${dataset}.json?$where=plate_id='${plate}' AND registration_state='${state}'&$limit=200&$$app_token=${APP_TOKEN}`;
+                `https://data.cityofnewyork.us/resource/${dataset}.json?$where=plate='${plate}' AND state='${state}'&$limit=200&$$app_token=${APP_TOKEN}`;
 
             return fetch(url).then(r=>r.json());
 
