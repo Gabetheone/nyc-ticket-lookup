@@ -27,7 +27,7 @@ async function searchTickets(){
     });
 
     /* remove duplicate tickets */
-
+/**/
     tickets = tickets.filter(
         (ticket,index,self)=>
             index === self.findIndex(t=>t.summons_number===ticket.summons_number)
