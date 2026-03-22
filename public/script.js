@@ -23,7 +23,7 @@ async function searchTickets(){
 
         const year = new Date(ticket.issue_date).getFullYear();
 
-        return year >= currentYear - 5;
+        return year >= currentYear - 6;
 
     });
 
